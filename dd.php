@@ -1,14 +1,55 @@
-    <?php
-  
+<?php
 
-$attribute = array("Water", "Dark","Wind","Fire","Earth","Light");
-$weapon = array("twin-swords ", "sword", "Staff ","Hammer ","double blade ", "katana ");
-$character = array("Samurai ", "Monk ", "Dragoon ", "Ninja ", "Barbarian ", "Knight ", "Necomancer ");
-$legion = array("Zombies", "Spiders", "Dragons", "Undead", "Werewovles", "Demons");
+//an array containing a list of attributes
+$attributes = array(
+    'Water',
+    'Dark',
+    'Wind',
+    'Fire',
+    'Earth',
+    'Light',
+);
 
-$a2 = $attribute[array_rand($attribute)];
- $w2 =$weapon[array_rand($weapon)];
- $c2 = $character[array_rand($character)];
- $l2 = $legion[array_rand($legion)];
+//an array containing a list of weapons
+$weapons = array(
+    'twin-swords',
+    'sword', 'Staff',
+    'Hammer',
+    'double blade',
+    'katana',
+);
 
-echo $story ="The legendary $c2 now wields the ancient $w2 of destruction, which channels the power of $a2, so he can conquer all. But his greatest challenge will be to combat the legion of $l2 before all is lost";
+//an array containing a list of characters
+$characters = array(
+    'Samurai',
+    'Monk',
+    'Dragoon',
+    'Ninja',
+    'Barbarian',
+    'Knight',
+    'Necomancer',
+);
+
+//an array containing a list of legions
+$legions = array(
+    'Zombies',
+    'Spiders',
+    'Dragons',
+    'Undead',
+    'Werewovles',
+    'Demons',
+);
+
+//grab a random attribute
+$attribute = $attributes[array_rand($attributes)];
+
+//grab a random weapon
+$weapon = $weapons[array_rand($weapons)];
+
+//grab a random character
+$character = $characters[array_rand($characters)];
+
+//grab a random legion
+$legion = $legions[array_rand($legions)];
+
+echo $story = "The legendary $character now wields the ancient $weapon of destruction, which channels the power of $attribute, so he can conquer all. But his greatest challenge will be to combat the legion of $legion before all is lost";
